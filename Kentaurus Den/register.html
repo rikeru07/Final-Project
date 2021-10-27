@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <title>Kentaurus' Den</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS v5.0.2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' type='text/css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Scripts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/account.js"></script>
+
+    </head>
+
+    <body>
+        <section class="intro-nav">
+            <div class="intro-container container-fluid px-md-5">
+                <div class="row justify-content-between">
+                    <div class="col-md-8 order-md-last">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <a class="logo navbar-brand" href="index.html"><img src="images/Logo White.png" alt="Logo.png" width="90px"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="social-media">
+                            <p class="pt-4 mb-0 d-flex">
+                                <a target="_blank" href="https://www.facebook.com/rikeru07" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                                <a target="_blank" href="https://twitter.com/RiKeRu07" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                                <a target="_blank" href="https://www.instagram.com/rikeru07/" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="register vh-100">
+            <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+              <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                  <div class="card-container col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;">
+                      <div class="card-body p-5">
+                        <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+          
+                        <form onsubmit ="return validateForm()" target="index.html">
+          
+                          <div class="form-outline mb-4">
+                            <input type="text" id="registerUsername" class="form-control form-control-lg" required>
+                            <label class="form-label" for="registerUsername">Username</label>
+                          </div>
+          
+                          <div class="form-outline mb-4">
+                            <input type="email" id="registerEmail" class="form-control form-control-lg" required>
+                            <label class="form-label" for="registerEmail">Email Address</label>
+                          </div>
+          
+                          <div class="form-outline mb-4">
+                            <input type="password" id="registerPassword" class="form-control form-control-lg" required>
+                            <label class="form-label" for="registerPassword">Password</label>
+                          </div>
+          
+                          <div class="form-outline mb-4">
+                            <input type="password" id="registerConfirmPass" class="form-control form-control-lg" required>
+                            <label class="form-label" for="registerConfirmPass">Confirm Password</label>
+                          </div>
+          
+                          <div class="form-check d-flex justify-content-center mb-5">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="registerTerms" required>
+                            <label class="form-check-label" for="registerTerms">
+                              I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                            </label>
+                          </div>
+          
+                          <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success btn-block btn-lg text-body" id="registerBTN"> Register </button>
+                          </div>
+          
+                          <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="index.html" class="fw-bold text-body"><u>Login here</u></a></p>
+          
+                        </form>
+          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+    </body>
+
+</html>

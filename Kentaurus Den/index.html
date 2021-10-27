@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <title>Kentaurus' Den</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS v5.0.2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' type='text/css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Scripts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/account.js"></script>
+        <script src="js/cart.js"></script>
+
+    </head>
+
+    <body onload="nameFunc()">
+        <section class="intro-nav">
+            <div class="intro-container container-fluid px-md-5">
+                <div class="row justify-content-between">
+                    <div class="col-md-8 order-md-last">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <a class="logo navbar-brand" href="index.html"><img src="images/Logo White.png" alt="Logo.png" width="90px"></span></a>
+                            </div>
+                            <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+                                <div class="right-cta-menu text-center d-flex align-items-center col-4">
+                                    <div class="ml-auto pt-3">
+                                        <p class="caller" id="caller"></p>
+                                    </div>
+                                </div>
+                                <div class="right-cta-menu text-right d-flex align-items-center col-2">
+                                    <div class="ml-auto">
+
+                                      <button class="loginBTN btn btn-white border-width-2 d-none d-lg-inline-block visible" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="LogIn">Log In</button>
+
+                                      <div class="Login dropdown-menu"  aria-labelledby="LogIn">
+                                        <form class="px-2 py-2">
+                                            <div class="form-group">
+                                              <label for="loginUsername">Username</label>
+                                              <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
+                                            </div>
+                                            <div class="form-group pt-2">
+                                              <label for="loginPassword">Password</label>
+                                              <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                                            </div>
+                                            <div class="form-check py-2">
+                                              <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                              <label class="form-check-label" for="dropdownCheck">
+                                                Remember me
+                                              </label>
+                                            </div>
+                                            <button type="submit" class="signInBTN btn btn-primary" onclick="signInForm()">Sign in</button>
+                                        </form>
+                                          <div class="dropdown-divider"></div>
+                                          <p class="px-3">New around here? <a class= "signUp" href="register.html">Sign up</a> </p>
+                                          
+                                      </div>
+
+                                    </div>
+                                    <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+                                  </div>
+                                  <div class="right-cta-menu text-center d-flex align-items-center col-">
+                                    <div class="ml-auto">
+                                        <button class="signOutBTN btn btn-white border-width-2 d-none d-lg-inline-block visible" id="SignOut" onclick="signOut()">Sign Out</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="social-media">
+                            <p class="pt-4 mb-0 d-flex">
+                                <a target="_blank" href="https://www.facebook.com/rikeru07" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                                <a target="_blank" href="https://twitter.com/RiKeRu07" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                                <a target="_blank" href="https://www.instagram.com/rikeru07/" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light pt-2 pb-0" id="ftco-navbar">
+
+                <div class="container-fluid">
+                
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars"></span> Menu
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="ftco-nav">
+                        <div class="nav nav-tabs m-auto" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="pork-tab" data-bs-toggle="tab" data-bs-target="#nav-pork" type="button" role="tab" aria-controls="nav-pork" aria-selected="true">Pork</button>
+                            <button class="nav-link" id="chicken-tab" data-bs-toggle="tab" data-bs-target="#nav-chicken" type="button" role="tab" aria-controls="nav-chicken" aria-selected="false">Chicken</button>
+                            <button class="nav-link" id="beef-tab" data-bs-toggle="tab" data-bs-target="#nav-beef" type="button" role="tab" aria-controls="nav-beef" aria-selected="false">Beef</button>
+                            <button class="nav-link" id="seafood-tab" data-bs-toggle="tab" data-bs-target="#nav-seafood" type="button" role="tab" aria-controls="nav-seafood" aria-selected="false">Seafood</button>
+                            <button class="nav-link" id="vegan-tab" data-bs-toggle="tab" data-bs-target="#nav-vegan" type="button" role="tab" aria-controls="nav-vegan" aria-selected="false">Vegan</button>
+                          </div>
+                    </div>
+            </nav>
+        </section>
+        <section>
+            <div class="product-cart container-fluid">
+                <div class="row justify-content-start">
+                    <div class="product col-md-11 tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-pork" role="tabpanel" aria-labelledby="pork-tab">
+                            <div class="row row-cols-4">
+                                <div class="col" id="productCard1">
+                                    <img class="menuImage" src="/images/Pork_1.jpg" alt="Pork_1">
+                                    <p class="menuName">DONGPO ROU</p>
+                                    <p class="menuSubName">CHINESE RED-COOKED PORK BELLY</p>
+                                    <p class="menuPrice">₱400.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard2">
+                                    <img class="menuImage" src="/images/Pork_2.jpg" alt="Pork_2">
+                                    <p class="menuName">PORK NECK STEAKS</p>
+                                    <p class="menuSubName">WITH APPLE, SAGE BROWN BUTTER, & ROASTED RADISHES</p>
+                                    <p class="menuPrice">₱420.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard3">
+                                    <img class="menuImage" src="/images/Pork_3.jpg" alt="Pork_3">
+                                    <p class="menuName">Pork Bakso Dumplings</p>
+                                    <p class="menuSubName">blend of ground coriander, ginger, and lemongrass</p>
+                                    <p class="menuPrice">₱440.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard4">
+                                    <img class="menuImage" src="/images/Pork_4.jfif" alt="Pork_4">
+                                    <p class="menuName">Braised Pork Belly</p>
+                                    <p class="menuSubName">with Pickled Radishes</p>
+                                    <p class="menuPrice">₱460.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard5">
+                                    <img class="menuImage" src="/images/Pork_5.jfif" alt="Pork_5">
+                                    <p class="menuName">Ginger-Sesame Pork Burgers</p>
+                                    <p class="menuSubName">with Slaw</p>
+                                    <p class="menuPrice">₱470.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard6">
+                                    <img class="menuImage" src="/images/Pork_6.jfif" alt="Pork_6">
+                                    <p class="menuName">Balinese Sticky Glazed Pork Ribs</p>
+                                    <p class="menuSubName">Sweet, hot, and tangy ribs</p>
+                                    <p class="menuPrice">₱480.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard7">
+                                    <img class="menuImage" src="/images/Pork_7.jfif" alt="Pork_7">
+                                    <p class="menuName">Balsamic Pork Chops</p>
+                                    <p class="menuSubName">Balsamic vinegar simmers with caramelized onions</p>
+                                    <p class="menuPrice">₱490.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard8">
+                                    <img class="menuImage" src="/images/Pork_8.jfif" alt="Pork_8">
+                                    <p class="menuName">Pork Belly Burnt Ends</p>
+                                    <p class="menuSubName">with Barbecue Sauce</p>
+                                    <p class="menuPrice">₱500.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-chicken" role="tabpanel" aria-labelledby="chicken-tab">
+                            <div class="row row-cols-4">
+                                <div class="col" id="productCard9">
+                                    <img class="menuImage" src="/images/Chicken_1.jfif" alt="Chicken_1">
+                                    <p class="menuName">Prune and Olive Chicken</p>
+                                    <p class="menuSubName">Mediterranean baked chicken dish</p>
+                                    <p class="menuPrice">₱410.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard10">
+                                    <img class="menuImage" src="/images/Chicken_2.jfif" alt="Chicken_2">
+                                    <p class="menuName">Chicken Marsala</p>
+                                    <p class="menuSubName">chicken breasts braised with Marsala wine and mushrooms</p>
+                                    <p class="menuPrice">₱420.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard11">
+                                    <img class="menuImage" src="/images/Chicken_3.jfif" alt="Chicken_3">
+                                    <p class="menuName">Poulet de Provencal</p>
+                                    <p class="menuSubName">an aromatic day in Eze, France</p>
+                                    <p class="menuPrice">₱430.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard12">
+                                    <img class="menuImage" src="/images/Chicken_4.jfif" alt="Chicken_4">
+                                    <p class="menuName">Chicken Cordon Bleu II</p>
+                                    <p class="menuSubName">Swiss cheese slices, breaded and sauteed</p>
+                                    <p class="menuPrice">₱450.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard13">
+                                    <img class="menuImage" src="/images/Chicken_5.jfif" alt="Chicken_5">
+                                    <p class="menuName">Chef John's Chicken</p>
+                                    <p class="menuSubName">ground black pepper, salt, olive oil, and butter</p>
+                                    <p class="menuPrice">₱460.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard14">
+                                    <img class="menuImage" src="/images/Chicken_6.jfif" alt="Chicken_6">
+                                    <p class="menuName">Bourbon Pecan Chicken</p>
+                                    <p class="menuSubName">Chicken breasts are coated in a pecan breading</p>
+                                    <p class="menuPrice">₱480.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard15">
+                                    <img class="menuImage" src="/images/Chicken_7.jfif" alt="Chicken_7">
+                                    <p class="menuName">Smothered Chicken</p>
+                                    <p class="menuSubName">with Spinach, Potatoes, and Mushrooms</p>
+                                    <p class="menuPrice">₱500.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard16">
+                                    <img class="menuImage" src="/images/Chicken_8.jfif" alt="Chicken_8">
+                                    <p class="menuName">Feta and Bacon Stuffed Chicken</p>
+                                    <p class="menuSubName">with Onion Mashed Potatoes</p>
+                                    <p class="menuPrice">₱510.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-beef" role="tabpanel" aria-labelledby="beef-tab">
+                            <div class="row row-cols-4">
+                                <div class="col" id="productCard17">
+                                    <img class="menuImage" src="/images/Beef_1.jfif" alt="Beef_1">
+                                    <p class="menuName">Porterhouse Steak</p>
+                                    <p class="menuSubName">perfectly tender and crusty steak</p>
+                                    <p class="menuPrice">₱400.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard18">
+                                    <img class="menuImage" src="/images/Beef_2.jfif" alt="Beef_2">
+                                    <p class="menuName">Steakhouse-Style Rib Eyes</p>
+                                    <p class="menuSubName">iron-y notes in prime-graded cuts of meat</p>
+                                    <p class="menuPrice">₱420.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard19">
+                                    <img class="menuImage" src="/images/Beef_3.jfif" alt="Beef_3">
+                                    <p class="menuName">Balsamic Marinated Flank Steak</p>
+                                    <p class="menuSubName">flank steak enormous flavor</p>
+                                    <p class="menuPrice">₱440.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard20">
+                                    <img class="menuImage" src="/images/Beef_4.jfif" alt="Beef_4">
+                                    <p class="menuName">Grilled Hanger Steak </p>
+                                    <p class="menuSubName">with Kimchi-Apple Slaw</p>
+                                    <p class="menuPrice">₱460.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard21">
+                                    <img class="menuImage" src="/images/Beef_5.jfif" alt="Beef_5">
+                                    <p class="menuName">Minute Steak Stacks</p>
+                                    <p class="menuSubName">with Herbed Anchovy Butter</p>
+                                    <p class="menuPrice">₱470.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard22">
+                                    <img class="menuImage" src="/images/Beef_6.jfif" alt="Beef_6">
+                                    <p class="menuName">Marinated Florentine Steak</p>
+                                    <p class="menuSubName">thick porterhouses to make this classic recipe</p>
+                                    <p class="menuPrice">₱480.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard23">
+                                    <img class="menuImage" src="/images/Beef_7.jfif" alt="Beef_7">
+                                    <p class="menuName">Skirt Steak</p>
+                                    <p class="menuSubName">with Paprika Butter</p>
+                                    <p class="menuPrice">₱490.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard24">
+                                    <img class="menuImage" src="/images/Beef_8.jfif" alt="Beef_8">
+                                    <p class="menuName">Grilled Skirt Steak</p>
+                                    <p class="menuSubName">with Green Sriracha</p>
+                                    <p class="menuPrice">₱500.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-seafood" role="tabpanel" aria-labelledby="seafood-tab">
+                            <div class="row row-cols-4">
+                                <div class="col" id="productCard25">
+                                    <img class="menuImage" src="/images/Seafood_1.jfif" alt="Seafood_1">
+                                    <p class="menuName">Snapper</p>
+                                    <p class="menuSubName">mix of crushed fennel seeds and grapefruit zest onto snapper</p>
+                                    <p class="menuPrice">₱400.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard26">
+                                    <img class="menuImage" src="/images/Seafood_2.jfif" alt="Seafood_2">
+                                    <p class="menuName">Bouillabaisse à l'Américaine</p>
+                                    <p class="menuSubName">luxe seafood soup from star chef Daniel Boulud</p>
+                                    <p class="menuPrice">₱420.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard27">
+                                    <img class="menuImage" src="/images/Seafood_3.jfif" alt="Seafood_3">
+                                    <p class="menuName">Seafood Pan Roast</p>
+                                    <p class="menuSubName">adding lobster, oysters and scallops</p>
+                                    <p class="menuPrice">₱440.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard28">
+                                    <img class="menuImage" src="/images/Seafood_4.jfif" alt="Seafood_4">
+                                    <p class="menuName">Salt-Crusted Tilapia</p>
+                                    <p class="menuSubName">with Lemongrass</p>
+                                    <p class="menuPrice">₱460.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard29">
+                                    <img class="menuImage" src="/images/Seafood_5.jfif" alt="Seafood_5">
+                                    <p class="menuName">Potato-Crusted Salmon</p>
+                                    <p class="menuSubName">with Herb Salad</p>
+                                    <p class="menuPrice">₱470.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard30">
+                                    <img class="menuImage" src="/images/Seafood_6.jfif" alt="Seafood_6">
+                                    <p class="menuName">Fettuccine</p>
+                                    <p class="menuSubName">with Spicy Shellfish</p>
+                                    <p class="menuPrice">₱480.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard31">
+                                    <img class="menuImage" src="/images/Seafood_7.jfif" alt="Seafood_7">
+                                    <p class="menuName">Spaghetti </p>
+                                    <p class="menuSubName">with Clams and Garlic</p>
+                                    <p class="menuPrice">₱490.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard32">
+                                    <img class="menuImage" src="/images/Seafood_8.jfif" alt="Seafood_8">
+                                    <p class="menuName">Pan-Seared Trout</p>
+                                    <p class="menuSubName">with Serrano Ham and Chile-Garlic Oil</p>
+                                    <p class="menuPrice">₱500.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-vegan" role="tabpanel" aria-labelledby="vegan-tab">
+                            <div class="row row-cols-4">
+                                <div class="col" id="productCard33">
+                                    <img class="menuImage" src="/images/Vegan_1.jfif" alt="Vegan_1">
+                                    <p class="menuName">Creamed Spinach and Parsnips</p>
+                                    <p class="menuSubName">duo of sweet parsnip and creamy spinach</p>
+                                    <p class="menuPrice">₱400.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard34">
+                                    <img class="menuImage" src="/images/Vegan_2.jfif" alt="Vegan_2">
+                                    <p class="menuName">Eggplant Parmesan</p>
+                                    <p class="menuSubName">with Crisp Bread Crumb Topping</p>
+                                    <p class="menuPrice">₱420.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard35">
+                                    <img class="menuImage" src="/images/Vegan_3.jfif" alt="Vegan_3">
+                                    <p class="menuName">Smoky Glazed Asparagus</p>
+                                    <p class="menuSubName">beautifully blistered crust when grilled</p>
+                                    <p class="menuPrice">₱440.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard36">
+                                    <img class="menuImage" src="/images/Vegan_4.jfif" alt="Vegan_4">
+                                    <p class="menuName">Warm Spaghetti</p>
+                                    <p class="menuSubName">Squash Salad</p>
+                                    <p class="menuPrice">₱460.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard37">
+                                    <img class="menuImage" src="/images/Vegan_5.jfif" alt="Vegan_5">
+                                    <p class="menuName">Caramelized Broccoli</p>
+                                    <p class="menuSubName">with Garlic</p>
+                                    <p class="menuPrice">₱470.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard38">
+                                    <img class="menuImage" src="/images/Vegan_6.jfif" alt="Vegan_6">
+                                    <p class="menuName">Layered Eggplant</p>
+                                    <p class="menuSubName">with Zucchini and Tomato Casserole</p>
+                                    <p class="menuPrice">₱480.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard39">
+                                    <img class="menuImage" src="/images/Vegan_7.jfif" alt="Vegan_7">
+                                    <p class="menuName">Chickpea and Spinach Stew</p>
+                                    <p class="menuSubName">flavor from tomato, raisins and saffron</p>
+                                    <p class="menuPrice">₱490.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                                <div class="col" id="productCard40">
+                                    <img class="menuImage" src="/images/Vegan_8.jfif" alt="Vegan_8">
+                                    <p class="menuName">Penne</p>
+                                    <p class="menuSubName">with Asparagus, Sage and Peas</p>
+                                    <p class="menuPrice">₱500.00</p>
+                                    <button class="menuButton btn btn-white border-width-2 d-none d-lg-inline-block visible" onclick="addToCart(this)">Order Now!</button>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+        
+                    <div class="cart col-md-2 order-md-last">
+                        <div class="summary ">
+                            <h3>Summary</h3>
+                            <div class="summary-item"><span class="text">Subtotal</span><span class="price" id="subtotal">₱0.00</span></div>
+                            <div class="summary-item"><span class="text">Discount</span><span class="price" id="discount">₱0.00</span></div>
+                            <div class="summary-item"><span class="text">Shipping</span><span class="price" id="shipping">₱50.00</span></div>
+                            <div class="summary-item"><span class="text">Total</span><span class="price" id="total">₱0.00</span></div>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="checkout()">Checkout</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>
